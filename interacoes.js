@@ -45,9 +45,12 @@ function clicou() {
             case 10:
                 var animal = "Boi"
                 break;
-            default:
-                //11
+            case 11:
                 var animal = "Tigre"
+                break;
+                
+            default:
+                var animal = "Resultado Inválido"
                 break;
         }
     res.innerHTML = `O seu animal no horóscopo chines é: ${animal}`

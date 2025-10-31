@@ -7,10 +7,10 @@ function clicou() {
     var anoLimite = 1927 //1987
 
     if (ano < anoLimite ) {
-        res.innerHTML = "Ano fora do limite estabelecido"
+        res.innerHTML = `Ano fora do limite estabelecido ${anoLimite}`
     }
 
-    if (ano == "" || ano > anoatual) {
+    else if (ano == "" || ano > anoatual) {
 
         res.innerHTML = "Digite um ano válido"
 

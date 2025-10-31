@@ -5,16 +5,9 @@ function clicou() {
     var anoatual = new Date()
     var anoatual = anoatual.getFullYear()
     var anoLimite = 1927 //1987
+    
+    if (ano !== "" && ano < anoatual && ano >= anoLimite && Number.isInteger(ano) && ano > 0) {
 
-    if (ano < anoLimite ) {
-        res.innerHTML = `Ano fora do limite estabelecido ${anoLimite}`
-    }
-
-    else if (ano == "" || ano > anoatual) {
-
-        res.innerHTML = "Digite um ano válido"
-
-    } else {
 
         var ano = ano - anoLimite
 
@@ -59,12 +52,19 @@ function clicou() {
             case 11:
                 var animal = "Tigre"
                 break;
-                
+
             default:
                 var animal = "Resultado Inválido"
                 break;
         }
 
-    res.innerHTML = `O seu animal no horóscopo chines é: ${animal}`
+        res.innerHTML = `O seu animal no horóscopo chines é: ${animal}`
+
+
+    } else if (ano < anoLimite) {
+        res.innerHTML = `Ano fora do limite estabelecido ${anoLimite}`
+    } 
+       else{
+        res.innerHTML = "Digite um ano válido"
     }
 }

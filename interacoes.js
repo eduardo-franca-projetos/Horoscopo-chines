@@ -62,7 +62,7 @@ function clicou() {
 
 
     } else if (ano < anoLimite) {
-        res.innerHTML = `Ano fora do limite estabelecido ${anoLimite}`
+        res.innerHTML = `Ano fora do limite estabelecido! (${anoLimite})`
     } 
        else{
         res.innerHTML = "Digite um ano válido"

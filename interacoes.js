@@ -4,14 +4,25 @@ function clicou() {
     var res = document.getElementById('tela')
     var anoatual = new Date()
     var anoatual = anoatual.getFullYear()
-    if (ano < 1987 || ano == "" || ano > anoatual) {
+    var anoLimite = 1927 //1987
+
+    if (ano < anoLimite ) {
+        res.innerHTML = "Ano fora do limite estabelecido"
+    }
+
+    if (ano == "" || ano > anoatual) {
+
         res.innerHTML = "Digite um ano válido"
+
     } else {
-        var ano = ano - 1987
+
+        var ano = ano - anoLimite
+
         while (ano > 11) {
             var ano = ano - 12
         }
         switch (ano) {
+
             case 0:
                 var animal = "Coelho"
                 break;
@@ -53,6 +64,7 @@ function clicou() {
                 var animal = "Resultado Inválido"
                 break;
         }
+
     res.innerHTML = `O seu animal no horóscopo chines é: ${animal}`
     }
 }
